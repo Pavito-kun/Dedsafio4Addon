@@ -8,7 +8,7 @@ Addon para **Minecraft Bedrock**.
 
 ## ¿Qué incluye?
 
-- **Ruletas y sistemas de muerte** que añaden tensión y sorpresas a la partida.
+- **Ruletas y sistemas de muerte**.
 - **Nuevas criaturas y variantes**, con más de 50 entidades incluidas en el Behavior Pack.
 - **Interfaz y recursos personalizados**, incluidos modelos, sonidos, partículas y texturas.
 
