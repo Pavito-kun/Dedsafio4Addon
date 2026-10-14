@@ -1,0 +1,1637 @@
+{
+  "namespace": "hud",
+  "hud_title_text/title_frame/title_background": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_name": "#hud_title_text_string",
+            "binding_type": "global"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(((not ('%.32s' * #hud_title_text_string = 'textures/paviui/safioanimations/')) and not ('%.14s' * #hud_title_text_string = 'ps_ded:mensaje') and not ('%.12s' * #hud_title_text_string = 'add_deditas:')) and not ('%.8s' * #hud_title_text_string = 'pavi_fx:') and not (#hud_title_text_string = 'ps_ded_ruleta_amarillo'))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+  "hud_title_text/title_frame/title": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_name": "#hud_title_text_string",
+            "binding_type": "global"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(((not ('%.32s' * #hud_title_text_string = 'textures/paviui/safioanimations/')) and not ('%.14s' * #hud_title_text_string = 'ps_ded:mensaje') and not ('%.12s' * #hud_title_text_string = 'add_deditas:')) and not ('%.8s' * #hud_title_text_string = 'pavi_fx:') and not (#hud_title_text_string = 'ps_ded_ruleta_amarillo'))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+  "hud_title_text/subtitle_frame/subtitle_background": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_name": "#hud_title_text_string",
+            "binding_type": "global"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(((not ('%.32s' * #hud_title_text_string = 'textures/paviui/safioanimations/')) and not ('%.14s' * #hud_title_text_string = 'ps_ded:mensaje') and not ('%.12s' * #hud_title_text_string = 'add_deditas:')) and not ('%.8s' * #hud_title_text_string = 'pavi_fx:') and not (#hud_title_text_string = 'ps_ded_ruleta_amarillo'))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+  "hud_title_text/subtitle_frame/subtitle": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "binding_name": "#hud_title_text_string",
+            "binding_type": "global"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(((not ('%.32s' * #hud_title_text_string = 'textures/paviui/safioanimations/')) and not ('%.14s' * #hud_title_text_string = 'ps_ded:mensaje') and not ('%.12s' * #hud_title_text_string = 'add_deditas:')) and not ('%.8s' * #hud_title_text_string = 'pavi_fx:') and not (#hud_title_text_string = 'ps_ded_ruleta_amarillo'))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+  "dedsafio_sprite_flipbook": {
+    "anim_type": "aseprite_flip_book",
+    "initial_uv": [
+      0,
+      0
+    ]
+  },
+  "dedsafio_sprite_alpha_in": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_in_time",
+    "from": 0,
+    "to": 1,
+    "next": "@hud.dedsafio_sprite_alpha_stay"
+  },
+  "dedsafio_sprite_alpha_stay": {
+    "anim_type": "wait",
+    "duration": "$title_stay_time",
+    "next": "@hud.dedsafio_sprite_alpha_out"
+  },
+  "dedsafio_sprite_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_out_time",
+    "from": 1,
+    "to": 0,
+    "destroy_at_end": "dedsafio_sequence_overlay"
+  },
+  "dedsafio_sequence_overlay": {
+    "type": "image",
+    "size": [
+      "100%",
+      "56.25%x"
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "#texture",
+    "uv": "@hud.dedsafio_sprite_flipbook",
+    "uv_size": [
+      960,
+      540
+    ],
+    "keep_ratio": true,
+    "disable_anim_fast_forward": true,
+    "alpha": "@hud.dedsafio_sprite_alpha_in",
+    "layer": 200,
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "#hud_title_text_string",
+        "target_property_name": "#texture"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('%.32s' * #hud_title_text_string = 'textures/paviui/safioanimations/')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "dedsafio_sequence_factory": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "dedsafio_sequence_overlay@hud.dedsafio_sequence_overlay"
+      }
+    }
+  },
+  "death_message_slide_in": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.45,
+    "from": [
+      0,
+      160
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "next": "@hud.death_message_hold"
+  },
+  "death_message_hold": {
+    "anim_type": "wait",
+    "duration": 2.1,
+    "next": "@hud.death_message_slide_out"
+  },
+  "death_message_slide_out": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": 0.45,
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      0,
+      160
+    ],
+    "destroy_at_end": "death_message_animated"
+  },
+  "death_subtitle": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 211,
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hud_title_text_string = 'textures/paviui/safioanimations/optimized/death/deathsafio')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "death_message_position": {
+          "type": "panel",
+          "size": [
+            "72%",
+            22
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            "34%"
+          ],
+          "layer": 211,
+          "controls": [
+            {
+              "death_message_animated": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "disable_anim_fast_forward": true,
+                "anims": [
+                  "@hud.death_message_slide_in"
+                ],
+                "controls": [
+                  {
+                    "message": {
+                      "type": "label",
+                      "size": [
+                        "100%",
+                        "100%"
+                      ],
+                      "text": "#text",
+                      "color": [
+                        1,
+                        0,
+                        0.12
+                      ],
+                      "font_size": "normal",
+                      "font_scale_factor": 0.85,
+                      "text_alignment": "center",
+                      "shadow": false,
+                      "localize": false,
+                      "layer": 212,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_subtitle_text_string",
+                          "binding_name_override": "#text",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "death_subtitle_factory": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "death_subtitle@hud.death_subtitle"
+      }
+    }
+  },
+  "roulette_message_slide_in": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.55,
+    "from": [
+      -2000,
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "next": "@hud.roulette_message_hold"
+  },
+  "roulette_message_hold": {
+    "anim_type": "wait",
+    "duration": 43.9,
+    "next": "@hud.roulette_message_slide_out"
+  },
+  "roulette_message_slide_out": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": 0.55,
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      -2000,
+      0
+    ],
+    "destroy_at_end": "roulette_message_animated"
+  },
+  "roulette_message": {
+    "type": "panel",
+    "size": [
+      "42%",
+      "18%"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [
+      "2.5%",
+      "8%"
+    ],
+    "layer": 210,
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('%.14s' * #hud_title_text_string = 'ps_ded:mensaje')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "roulette_message_animated": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 210,
+          "disable_anim_fast_forward": true,
+          "anims": [
+            "@hud.roulette_message_slide_in"
+          ],
+          "controls": [
+            {
+              "background": {
+                "type": "image",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "texture": "textures/ui/Black",
+                "alpha": 0.72,
+                "layer": 210
+              }
+            },
+            {
+              "roulette_icon": {
+                "type": "image",
+                "size": [
+                  22,
+                  22
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  10,
+                  9
+                ],
+                "texture": "textures/paviui/safio/ruletamenu",
+                "keep_ratio": true,
+                "layer": 212
+              }
+            },
+            {
+              "heading": {
+                "type": "label",
+                "size": [
+                  "100% - 46px",
+                  24
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  39,
+                  8
+                ],
+                "text": "#text",
+                "font_size": "normal",
+                "font_scale_factor": 1,
+                "text_alignment": "left",
+                "shadow": true,
+                "localize": false,
+                "layer": 212,
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#hud_title_text_string - 'ps_ded:mensaje')",
+                    "target_property_name": "#text"
+                  }
+                ]
+              }
+            },
+            {
+              "message": {
+                "type": "label",
+                "size": [
+                  "100% - 28px",
+                  "100% - 46px"
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  14,
+                  38
+                ],
+                "text": "#text",
+                "font_size": "normal",
+                "font_scale_factor": 0.82,
+                "text_alignment": "left",
+                "shadow": true,
+                "localize": false,
+                "layer": 212,
+                "bindings": [
+                  {
+                    "binding_name": "#hud_subtitle_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "roulette_message_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "roulette_message_factory@hud.roulette_message"
+      }
+    }
+  },
+  "dedsafio_animation_preloader": {
+    "type": "panel",
+    "size": [
+      1,
+      1
+    ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [
+      -1,
+      -1
+    ],
+    "clips_children": true,
+    "layer": -100,
+    "controls": [
+      {
+        "preload_blue_00": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0000",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_01": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0001",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_02": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0002",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_03": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0003",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_04": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0004",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_05": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0005",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_06": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0006",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_07": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0007",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_08": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0008",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_09": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0009",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_10": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0010",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_11": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0011",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_12": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0012",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_13": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0013",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_14": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0014",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_blue_15": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/blue/blue.0015",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_00": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0000",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_01": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0001",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_02": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0002",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_03": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0003",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_04": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0004",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_05": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0005",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_06": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0006",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_07": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0007",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_08": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0008",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_09": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0009",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_10": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0010",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_11": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0011",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_12": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0012",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_13": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0013",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_14": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0014",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_orange_15": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/orange/orange.0015",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_00": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0000",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_01": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0001",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_02": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0002",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_03": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0003",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_04": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0004",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_05": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0005",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_06": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0006",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_07": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0007",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_08": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0008",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_09": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0009",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_10": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0010",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_11": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0011",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_12": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0012",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_13": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0013",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_14": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0014",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_red_15": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/red/red.0015",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_00": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0000",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_01": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0001",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_02": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0002",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_03": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0003",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_04": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0004",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_05": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0005",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_06": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0006",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_07": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0007",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_08": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0008",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_09": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0009",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_10": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0010",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_11": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0011",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_12": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0012",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_13": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0013",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_14": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0014",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_death_15": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/death/death.0015",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_00": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0000",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_01": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0001",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_02": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0002",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_03": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0003",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_04": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0004",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_05": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0005",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_06": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0006",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_07": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0007",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_08": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0008",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_09": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0009",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_10": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0010",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_11": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0011",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_12": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0012",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_13": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0013",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_14": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0014",
+          "alpha": 0.001
+        }
+      },
+      {
+        "preload_green_15": {
+          "type": "image",
+          "size": [
+            1,
+            1
+          ],
+          "texture": "textures/paviui/safioanimations/optimized/green/green.0015",
+          "alpha": 0.001
+        }
+      }
+    ]
+  },
+  "deditas_hud": {
+    "type": "panel",
+    "size": [
+      "18%",
+      "3.6%"
+    ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [
+      "-2%",
+      "2%"
+    ],
+    "layer": 220,
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('%.12s' * #hud_title_text_string = 'add_deditas:')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "texture": "textures/ui/Black",
+          "alpha": 0.8,
+          "layer": 220
+        }
+      },
+      {
+        "red_coin": {
+          "type": "panel",
+          "size": [
+            "32%",
+            "100%"
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [
+            "2%",
+            0
+          ],
+          "layer": 221,
+          "controls": [
+            {
+              "icon": {
+                "type": "image",
+                "size": [
+                  18,
+                  18
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/items/redstone_dust",
+                "keep_ratio": true,
+                "layer": 222
+              }
+            },
+            {
+              "count": {
+                "type": "label",
+                "size": [
+                  "100% - 22px",
+                  "100%"
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [
+                  22,
+                  0
+                ],
+                "text": "#text",
+                "font_size": "normal",
+                "font_scale_factor": 0.8,
+                "text_alignment": "left",
+                "shadow": true,
+                "localize": false,
+                "layer": 222,
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('§z' + (((((#hud_title_text_string - 'add_deditas:') * 1) - (((#hud_title_text_string - 'add_deditas:') * 1) % 10000)) / 10000)))",
+                    "target_property_name": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "green_coin": {
+          "type": "panel",
+          "size": [
+            "32%",
+            "100%"
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [
+            "34%",
+            0
+          ],
+          "layer": 221,
+          "controls": [
+            {
+              "icon": {
+                "type": "image",
+                "size": [
+                  18,
+                  18
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/items/emerald",
+                "keep_ratio": true,
+                "layer": 222
+              }
+            },
+            {
+              "count": {
+                "type": "label",
+                "size": [
+                  "100% - 22px",
+                  "100%"
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [
+                  22,
+                  0
+                ],
+                "text": "#text",
+                "font_size": "normal",
+                "font_scale_factor": 0.8,
+                "text_alignment": "left",
+                "shadow": true,
+                "localize": false,
+                "layer": 222,
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('§z' + ((((((#hud_title_text_string - 'add_deditas:') * 1) - (((#hud_title_text_string - 'add_deditas:') * 1) % 100)) / 100) % 100))",
+                    "target_property_name": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "blue_coin": {
+          "type": "panel",
+          "size": [
+            "32%",
+            "100%"
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [
+            "68%",
+            0
+          ],
+          "layer": 221,
+          "controls": [
+            {
+              "icon": {
+                "type": "image",
+                "size": [
+                  18,
+                  18
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/items/diamond",
+                "keep_ratio": true,
+                "layer": 222
+              }
+            },
+            {
+              "count": {
+                "type": "label",
+                "size": [
+                  "100% - 22px",
+                  "100%"
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [
+                  22,
+                  0
+                ],
+                "text": "#text",
+                "font_size": "normal",
+                "font_scale_factor": 0.8,
+                "text_alignment": "left",
+                "shadow": true,
+                "localize": false,
+                "layer": 222,
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('§z' + (((#hud_title_text_string - 'add_deditas:') * 1) % 100))",
+                    "target_property_name": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "hud_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "deditas_hud@hud.deditas_hud": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "dedsafio_sequence_factory@hud.dedsafio_sequence_factory": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "roulette_message_factory@hud.roulette_message_factory": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "death_subtitle_factory@hud.death_subtitle_factory": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "pavi_effect_factory@pavi_difficulty.effect_factory": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "pavi_yellow_factory@pavi_difficulty.yellow_factory": {}
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:client_biome": {
+		"description": {
+			"identifier": "pavi:limbo"
+		},
+		"components": {
+			"minecraft:water_appearance": {
+				"surface_color": "#321047",
+				"surface_opacity": 0.96
+			}
+		}
+	}
+}

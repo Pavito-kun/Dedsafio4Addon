@@ -1,0 +1,31 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Dedsafio 4 - Ruletas y Muerte Pavito",
+		"description": "Dedsafio 4 - Ruletas y Muerte Pavito Resource Pack",
+		"uuid": "42a4c11f-fcd8-09d7-79c9-946f07ff4ef3",
+		"version": [1, 0, 4],
+		"min_engine_version": [1, 16, 0]
+	},
+	"metadata": {
+		"authors": ["Pavito"],
+		"generated_with": {
+			"blockbench_item_wizard": ["1.2.4"],
+			"blockbench_entity_wizard": ["1.8.3"]
+		}
+	},
+	"modules": [
+		{
+			"description": "Dedsafio 4 - Ruletas y Muerte Pavito",
+			"type": "resources",
+			"uuid": "da22ca5c-90f0-dd71-dd76-ac77d4551c34",
+			"version": [1, 0, 4]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "366f210d-5b73-6432-d1c8-eed1cb6afa27",
+			"version": [1, 0, 4]
+		}
+	]
+}

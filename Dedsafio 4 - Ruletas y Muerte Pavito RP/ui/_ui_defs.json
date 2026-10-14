@@ -1,0 +1,11 @@
+{
+  "ui_defs": [
+    "ui/hud_screen.json",
+    "ui/dedsafio_inventory.json",
+    "ui/dedsafio_bestiary.json",
+    "ui/inventory_screen.json",
+    "ui/inventory_screen_pocket.json",
+    "ui/pause_screen.json",
+    "ui/difficulty_effects.json"
+  ]
+}

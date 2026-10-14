@@ -1,0 +1,58 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "pavi:ink_projectile",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.15,
+        "height": 0.15
+      },
+      "minecraft:projectile": {
+        "power": 1.8,
+        "gravity": 0.02,
+        "anchor": 1,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "on_hit": {
+          "impact_damage": {
+            "damage": 3,
+            "knockback": false
+          },
+          "remove_on_hit": {}
+        }
+      },
+      "minecraft:physics": {
+        "has_gravity": false
+      },
+      "minecraft:timer": {
+        "looping": false,
+        "time": 6,
+        "time_down_event": {
+          "event": "pavi:expire",
+          "target": "self"
+        }
+      }
+    },
+    "component_groups": {
+      "pavi:remove": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "events": {
+      "pavi:expire": {
+        "add": {
+          "component_groups": [
+            "pavi:remove"
+          ]
+        }
+      }
+    }
+  }
+}

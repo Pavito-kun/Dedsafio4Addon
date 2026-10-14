@@ -1,0 +1,184 @@
+{
+  "namespace": "pause",
+
+  "pause_screen": {
+    "$screen_background_alpha": 0.0
+  },
+
+  "pause_button_label": {
+    "type": "label",
+    "size": "$button_text_size",
+    "max_size": "$button_text_max_size",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "text": "$button_text",
+    "color": "$text_color",
+    "font_type": "default",
+    "font_size": "$button_font_size",
+    "font_scale_factor": "$button_font_scale_factor",
+    "text_alignment": "center",
+    "shadow": true,
+    "layer": 3
+  },
+
+  "pause_button_template@common_buttons.light_text_button": {
+    "size": ["100%", "16%"],
+    "focus_identifier": "$pressed_button_name",
+
+    "$default_button_texture": "textures/ui/Black",
+    "$hover_button_texture": "textures/ui/Black",
+    "$pressed_button_texture": "textures/ui/Black",
+    "$locked_button_texture": "textures/ui/Black",
+    "$default_button_alpha": 0.0,
+    "$default_hover_alpha": 0.0,
+    "$default_pressed_alpha": 0.0,
+    "$locked_alpha": 0.45,
+
+    "$default_text_color": [1.0, 1.0, 1.0],
+    "$hover_text_color": [1.0, 1.0, 1.0],
+    "$pressed_text_color": [0.75, 0.75, 0.75],
+    "$locked_text_color": [0.45, 0.45, 0.45],
+    "$button_font_size": "normal",
+    "$button_font_scale_factor": 1.3,
+    "$button_text_size": ["96%", "100%"],
+    "$button_text_max_size": ["96%", "100%"],
+    "$button_type_panel": "pause.pause_button_label",
+    "$border_visible": false
+  },
+
+  "return_to_game_button@pause.pause_button_template": {
+    "$pressed_button_name": "button.menu_continue",
+    "$button_text": "VOLVER AL JUEGO",
+    "$default_text_color": [0.18, 1.0, 0.20],
+    "$hover_text_color": [0.55, 1.0, 0.52],
+    "$pressed_text_color": [0.08, 0.68, 0.10],
+    "focus_change_down": "button.menu_settings",
+    "focus_change_up": "button.menu_quit"
+  },
+
+  "options_button@pause.pause_button_template": {
+    "$pressed_button_name": "button.menu_settings",
+    "$button_text": "OPCIONES",
+    "$default_text_color": [1.0, 0.92, 0.08],
+    "$hover_text_color": [1.0, 1.0, 0.48],
+    "$pressed_text_color": [0.72, 0.62, 0.04],
+    "focus_change_down": "button.to_profile_or_skins_screen",
+    "focus_change_up": "button.menu_continue"
+  },
+
+  "skin_button@pause.pause_button_template": {
+    "$pressed_button_name": "button.to_profile_or_skins_screen",
+    "$button_text": "SKIN",
+    "$default_text_color": [0.12, 0.78, 1.0],
+    "$hover_text_color": [0.52, 0.92, 1.0],
+    "$pressed_text_color": [0.05, 0.46, 0.72],
+    "focus_change_down": "button.menu_quit",
+    "focus_change_up": "button.menu_settings",
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_name": "#can_change_skin",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "disconnect_button@pause.pause_button_template": {
+    "$pressed_button_name": "button.menu_quit",
+    "$button_text": "DESCONECTARSE",
+    "$default_text_color": [1.0, 0.26, 0.26],
+    "$hover_text_color": [1.0, 0.58, 0.58],
+    "$pressed_text_color": [0.70, 0.08, 0.08],
+    "focus_change_down": "button.menu_continue",
+    "focus_change_up": "button.to_profile_or_skins_screen"
+  },
+
+  "pause_buttons": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": ["78%", "44%"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "return_to_game@pause.return_to_game_button": {}
+      },
+      {
+        "gap_1": {
+          "type": "panel",
+          "size": [0, "12%"]
+        }
+      },
+      {
+        "options@pause.options_button": {}
+      },
+      {
+        "gap_2": {
+          "type": "panel",
+          "size": [0, "12%"]
+        }
+      },
+      {
+        "skin@pause.skin_button": {}
+      },
+      {
+        "gap_3": {
+          "type": "panel",
+          "size": [0, "12%"]
+        }
+      },
+      {
+        "disconnect@pause.disconnect_button": {}
+      }
+    ]
+  },
+
+  "pause_menu": {
+    "type": "panel",
+    "size": ["70%y", "100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 3,
+    "controls": [
+      {
+        "dedsafio_logo@common_art.title_image": {
+          "size": ["82%", "61%x"],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [0, "5%"],
+          "keep_ratio": true,
+          "layer": 3
+        }
+      },
+      {
+        "buttons@pause.pause_buttons": {
+          "offset": [0, "48%"]
+        }
+      }
+    ]
+  },
+
+  "pause_screen_content": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 1,
+    "controls": [
+      {
+        "black_transparent_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.24,
+          "size": ["100%", "100%"],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 1
+        }
+      },
+      {
+        "menu@pause.pause_menu": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "pavi:reaper",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/difficulty/creatures_atlas"
+      },
+      "geometry": {
+        "default": "geometry.pavi.bomba_warden"
+      },
+      "animations": {
+        "move": "animation.pavi.difficulty.move",
+        "fly": "animation.pavi.difficulty.fly"
+      },
+      "scripts": {
+        "animate": [
+          "move"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.pavi.difficulty"
+      ],
+      "spawn_egg": {
+        "base_color": "#382644",
+        "overlay_color": "#f193cf"
+      }
+    }
+  }
+}

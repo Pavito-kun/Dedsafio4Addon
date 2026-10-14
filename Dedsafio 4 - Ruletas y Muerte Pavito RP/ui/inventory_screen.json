@@ -1,0 +1,35 @@
+{
+  "namespace": "crafting",
+
+  "recipe_inventory_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "dedsafio_inventory_root@dedsafio_inventory.inventory_extension": {
+            "$menu_icon_anchor_from": "top_left",
+            "$menu_icon_anchor_to": "top_left",
+            "$menu_icon_offset": [14, 20]
+          }
+        }
+      }
+    ]
+  },
+
+  "crafting_panel_2x2": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "dedsafio_soul_info@dedsafio_inventory.soul_info_button": {
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [58, 55]
+          }
+        }
+      }
+    ]
+  }
+}

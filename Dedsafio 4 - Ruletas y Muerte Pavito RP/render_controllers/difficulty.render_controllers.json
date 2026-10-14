@@ -1,0 +1,35 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.pavi.difficulty": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ]
+    },
+    "controller.render.pavi.shapeshifter": {
+      "arrays": {
+        "geometries": {
+          "Array.forms": [
+            "Geometry.default",
+            "Geometry.human"
+          ]
+        }
+      },
+      "geometry": "Array.forms[query.variant]",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ]
+    }
+  }
+}

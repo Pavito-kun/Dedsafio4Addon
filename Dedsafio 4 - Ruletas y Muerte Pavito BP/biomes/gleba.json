@@ -1,0 +1,18 @@
+{
+	"format_version": "1.26.50",
+	"minecraft:biome": {
+		"description": {
+			"identifier": "pavi:gleba"
+		},
+		"components": {
+			"minecraft:climate": {
+				"downfall": 0.0,
+				"snow_accumulation": [0.0, 0.0],
+				"temperature": 1.0
+			},
+			"minecraft:tags": {
+				"tags": ["overworld", "no_legacy_worldgen"]
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:item": {
+    "description": {
+      "identifier": "pavi:totem_limbo",
+      "menu_category": { "category": "items" }
+    },
+    "components": {
+      "minecraft:display_name": { "value": "Tótem Limbo" },
+      "minecraft:icon": { "textures": { "default": "pavi_totem_limbo" } },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": false
+    }
+  }
+}

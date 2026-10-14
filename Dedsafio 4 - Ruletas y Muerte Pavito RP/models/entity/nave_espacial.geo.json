@@ -1,0 +1,65 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pavi_spaceship",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 4.8,
+				"visible_bounds_offset": [0, 1.6, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-14, 0, -14], "size": [28, 55, 28], "uv": [-39, -26]}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.pavi_spaceship.glass",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1.2, 0]
+			},
+			"bones": [
+				{
+					"name": "canopy",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-3.4, 11.2, -17], "size": [6.8, 1.2, 8], "uv": [0, 0]},
+						{"origin": [-4.2, 10.8, -16], "size": [0.8, 1.2, 6], "uv": [0, 0]},
+						{"origin": [3.4, 10.8, -16], "size": [0.8, 1.2, 6], "uv": [0, 0]}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.pavi_spaceship.accents",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1.2, 0]
+			},
+			"bones": [
+				{
+					"name": "accents",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-21, 7.1, -4], "size": [5, 0.2, 12], "uv": [0, 0]},
+						{"origin": [16, 7.1, -4], "size": [5, 0.2, 12], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:block": {
+    "description": {
+      "identifier": "pavi:grasa_liquida",
+      "menu_category": {
+        "category": "nature"
+      }
+    },
+    "components": {
+      "minecraft:display_name": "Grasa líquida",
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1.2
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2
+      },
+      "minecraft:geometry": "geometry.pavi.block_grasa_liquida",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "pavi_difficulty_atlas",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:map_color": "#cc9caa"
+    }
+  }
+}

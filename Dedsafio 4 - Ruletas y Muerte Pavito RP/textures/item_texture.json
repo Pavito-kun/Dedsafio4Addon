@@ -1,0 +1,50 @@
+{
+  "texture_data": {
+    "creeper_de_pasto_spawn_egg": {
+      "textures": [
+        "textures/items/creeper_de_pasto_spawn_egg"
+      ]
+    },
+    "menu_de_configuracion_dedsafio_4": {
+      "textures": "textures/items/menu_de_configuracion_dedsafio_4.png"
+    },
+    "pavi_nutritotem": {
+      "textures": "textures/items/menu_de_configuracion_dedsafio_4.png"
+    },
+    "pavi_totem_limbo": {
+      "textures": "textures/items/menu_de_configuracion_dedsafio_4.png"
+    },
+    "pavi_totem_glebanoide": {
+      "textures": "textures/items/menu_de_configuracion_dedsafio_4.png"
+    },
+    "pavi_totem_eon": {
+      "textures": "textures/items/menu_de_configuracion_dedsafio_4.png"
+    },
+    "pavi_spaceship_spawn_egg": {
+      "textures": [
+        "textures/items/creeper_de_pasto_spawn_egg"
+      ]
+    },
+    "pavi_cuchara_resurreccion": {
+      "textures": "textures/difficulty/cuchara_resurreccion"
+    },
+    "pavi_pildora_zombificacion": {
+      "textures": "textures/difficulty/pildora_zombificacion"
+    },
+    "pavi_linterna": {
+      "textures": "textures/difficulty/linterna"
+    },
+    "pavi_altavoz": {
+      "textures": "textures/difficulty/altavoz"
+    },
+    "pavi_corazon_limbo": {
+      "textures": "textures/difficulty/corazon_limbo"
+    },
+    "pavi_manzana_ambar": {
+      "textures": "textures/difficulty/manzana_ambar"
+    },
+    "pavi_indicador_insomnia": {
+      "textures": "textures/difficulty/corazon_limbo"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:fog_settings": {
+    "description": {
+      "identifier": "pavi:revil_sky_8"
+    },
+    "distance": {
+      "air": {
+        "fog_start": 0.6,
+        "fog_end": 0.88,
+        "fog_color": "#2E070C",
+        "render_distance_type": "render"
+      },
+      "weather": {
+        "fog_start": 0.6,
+        "fog_end": 0.88,
+        "fog_color": "#2E070C",
+        "render_distance_type": "render"
+      }
+    }
+  }
+}

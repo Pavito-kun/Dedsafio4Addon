@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.pavi_spaceship": {
+			"geometry": "Geometry.default",
+			"materials": [{ "*": "Material.default" }],
+			"textures": ["Texture.default"]
+		},
+		"controller.render.pavi_spaceship.glass": {
+			"geometry": "Geometry.glass",
+			"materials": [{ "*": "Material.glass" }],
+			"textures": ["Texture.glass"]
+		},
+		"controller.render.pavi_spaceship.accent": {
+			"geometry": "Geometry.accent",
+			"materials": [{ "*": "Material.default" }],
+			"textures": ["Texture.accent"]
+		}
+	}
+}

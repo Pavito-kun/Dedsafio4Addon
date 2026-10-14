@@ -1,0 +1,21 @@
+{
+	"pavi.dedsafio.sfx.deathsound": {
+		"category": "ui",
+		"sounds": [
+			"sounds/deathsound"
+		]
+	},
+	"pavi.dedsafio.sfx.ruletasendinfo": {
+		"category": "ui",
+		"sounds": [
+			"sounds/ruletasendinfo"
+		]
+	},
+
+	"pavi.dedsafio.sfx.ruletasound": {
+		"category": "ui",
+		"sounds": [
+			"sounds/ruletasound"
+		]
+	}
+}

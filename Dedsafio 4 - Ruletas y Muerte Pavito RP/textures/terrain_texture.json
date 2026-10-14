@@ -1,0 +1,11 @@
+{
+  "resource_pack_name": "Dedsafio",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "pavi_difficulty_atlas": {
+      "textures": "textures/difficulty/creatures_atlas"
+    }
+  }
+}

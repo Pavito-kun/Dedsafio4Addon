@@ -1,0 +1,4027 @@
+{
+  "namespace": "dedsafio_bestiary",
+  "cell_default": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "portrait": {
+          "type": "image",
+          "texture": "$mob_icon",
+          "size": [
+            "84%",
+            "84%x"
+          ],
+          "max_size": [38, 38],
+          "keep_ratio": true,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            2
+          ]
+        }
+      },
+      {
+        "name": {
+          "type": "label",
+          "text": "$mob_name",
+          "size": [
+            "100% - 2px",
+            32
+          ],
+          "font_scale_factor": 0.55,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": true,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            40
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "cell_hover@dedsafio_bestiary.cell_default": {
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/control_white",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "color": [
+            0.06,
+            0.25,
+            0.35
+          ],
+          "alpha": 0.9,
+          "layer": -1
+        }
+      },
+      {
+        "portrait": {
+          "type": "image",
+          "texture": "$mob_icon",
+          "size": [
+            "84%",
+            "84%x"
+          ],
+          "max_size": [38, 38],
+          "keep_ratio": true,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            2
+          ]
+        }
+      },
+      {
+        "name": {
+          "type": "label",
+          "text": "$mob_name",
+          "size": [
+            "100% - 2px",
+            32
+          ],
+          "font_scale_factor": 0.55,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": true,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            40
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "cell@common_toggles.light_template_toggle": {
+    "size": [
+      "13.33%",
+      74
+    ],
+    "$toggle_binding_type": "none",
+    "$radio_toggle_group": true,
+    "$toggle_name": "dedsafio_mob_view",
+    "$toggle_group_default_selected": 0,
+    "$toggle_tts_header": "$mob_name",
+    "$unchecked_control": "dedsafio_bestiary.cell_default",
+    "$checked_control": "dedsafio_bestiary.cell_hover",
+    "$unchecked_hover_control": "dedsafio_bestiary.cell_hover",
+    "$checked_hover_control": "dedsafio_bestiary.cell_hover",
+    "$unchecked_locked_control": "dedsafio_bestiary.cell_default",
+    "$unchecked_locked_hover_control": "dedsafio_bestiary.cell_default",
+    "$checked_locked_control": "dedsafio_bestiary.cell_hover",
+    "$checked_locked_hover_control": "dedsafio_bestiary.cell_hover"
+  },
+  "content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      760
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "unlocked_row_1@dedsafio_inventory.book_unlocked_row": {
+          "$icon_1": "textures/items/spawn_eggs/spawn_egg_creeper",
+          "$icon_2": "textures/items/ominous_trial_key",
+          "$icon_3": "textures/items/totem",
+          "$icon_4": "textures/items/dragons_breath",
+          "$icon_5": "textures/items/spawn_eggs/spawn_egg_warden",
+          "$icon_6": "textures/items/nether_star",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            70,
+            8
+          ]
+        }
+      },
+      {
+        "legacy_roulette_0": {
+          "type": "image",
+          "texture": "textures/paviui/safio/ruletamenu",
+          "size": [
+            40,
+            40
+          ],
+          "keep_ratio": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            8
+          ]
+        }
+      },
+      {
+        "unlocked_row_2@dedsafio_inventory.book_unlocked_row": {
+          "$icon_1": "textures/items/spawn_eggs/spawn_egg_blaze",
+          "$icon_2": "textures/items/spawn_eggs/spawn_egg_breeze",
+          "$icon_3": "textures/items/ominous_bottle",
+          "$icon_4": "textures/items/trial_key",
+          "$icon_5": "textures/items/heartofthesea_closed",
+          "$icon_6": "textures/items/apple_golden",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            70,
+            56
+          ]
+        }
+      },
+      {
+        "legacy_roulette_1": {
+          "type": "image",
+          "texture": "textures/paviui/safio/ruletamenu",
+          "size": [
+            40,
+            40
+          ],
+          "keep_ratio": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            56
+          ]
+        }
+      },
+      {
+        "heading": {
+          "type": "label",
+          "text": "§eMobs · pulsa para ver su ficha",
+          "size": [
+            "100%",
+            16
+          ],
+          "font_scale_factor": 0.8,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            106
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "mob_roulette_0": {
+          "type": "image",
+          "texture": "textures/paviui/safio/ruletamenu",
+          "size": [
+            "12%",
+            40
+          ],
+          "keep_ratio": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            136
+          ]
+        }
+      },
+      {
+        "mob_roulette_1": {
+          "type": "image",
+          "texture": "textures/paviui/safio/ruletamenu",
+          "size": [
+            "12%",
+            40
+          ],
+          "keep_ratio": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            214
+          ]
+        }
+      },
+      {
+        "mob_roulette_2": {
+          "type": "image",
+          "texture": "textures/paviui/safio/ruletamenu",
+          "size": [
+            "12%",
+            40
+          ],
+          "keep_ratio": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            292
+          ]
+        }
+      },
+      {
+        "mob_roulette_3": {
+          "type": "image",
+          "texture": "textures/paviui/safio/ruletamenu",
+          "size": [
+            "12%",
+            40
+          ],
+          "keep_ratio": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            370
+          ]
+        }
+      },
+      {
+        "mob_roulette_4": {
+          "type": "image",
+          "texture": "textures/paviui/safio/ruletamenu",
+          "size": [
+            "12%",
+            40
+          ],
+          "keep_ratio": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            448
+          ]
+        }
+      },
+      {
+        "mob_roulette_5": {
+          "type": "image",
+          "texture": "textures/paviui/safio/ruletamenu",
+          "size": [
+            "12%",
+            40
+          ],
+          "keep_ratio": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            526
+          ]
+        }
+      },
+      {
+        "mob_roulette_6": {
+          "type": "image",
+          "texture": "textures/paviui/safio/ruletamenu",
+          "size": [
+            "12%",
+            40
+          ],
+          "keep_ratio": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            604
+          ]
+        }
+      },
+      {
+        "mob_roulette_7": {
+          "type": "image",
+          "texture": "textures/paviui/safio/ruletamenu",
+          "size": [
+            "12%",
+            40
+          ],
+          "keep_ratio": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            682
+          ]
+        }
+      },
+      {
+        "mob_bomba_warden@dedsafio_bestiary.cell": {
+          "$mob_name": "Bombas Warden",
+          "$mob_icon": "textures/paviui/safio/mobs/bomba_warden",
+          "$toggle_group_forced_index": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "18.00%",
+            130
+          ]
+        }
+      },
+      {
+        "mob_pod_phora@dedsafio_bestiary.cell": {
+          "$mob_name": "Pod Phora",
+          "$mob_icon": "textures/paviui/safio/mobs/pod_phora",
+          "$toggle_group_forced_index": 2,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "31.33%",
+            130
+          ]
+        }
+      },
+      {
+        "mob_skiff_phora@dedsafio_bestiary.cell": {
+          "$mob_name": "Skiff Phora",
+          "$mob_icon": "textures/paviui/safio/mobs/skiff_phora",
+          "$toggle_group_forced_index": 3,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "44.66%",
+            130
+          ]
+        }
+      },
+      {
+        "mob_creeper_nuclear@dedsafio_bestiary.cell": {
+          "$mob_name": "Creeper Nuclear",
+          "$mob_icon": "textures/paviui/safio/mobs/creeper_nuclear",
+          "$toggle_group_forced_index": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "57.99%",
+            130
+          ]
+        }
+      },
+      {
+        "mob_reptisaurio_salvaje@dedsafio_bestiary.cell": {
+          "$mob_name": "Reptisaurio Salvaje",
+          "$mob_icon": "textures/paviui/safio/mobs/reptisaurio_salvaje",
+          "$toggle_group_forced_index": 5,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "71.32%",
+            130
+          ]
+        }
+      },
+      {
+        "mob_plumosaurio@dedsafio_bestiary.cell": {
+          "$mob_name": "Plumosaurio",
+          "$mob_icon": "textures/paviui/safio/mobs/plumosaurio",
+          "$toggle_group_forced_index": 6,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "84.65%",
+            130
+          ]
+        }
+      },
+      {
+        "mob_dromoraptor_rojo@dedsafio_bestiary.cell": {
+          "$mob_name": "Dromoraptor Rojo",
+          "$mob_icon": "textures/paviui/safio/mobs/dromoraptor_rojo",
+          "$toggle_group_forced_index": 7,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "18.00%",
+            208
+          ]
+        }
+      },
+      {
+        "mob_reptisaurio_guerrero@dedsafio_bestiary.cell": {
+          "$mob_name": "Reptisaurio Guerrero",
+          "$mob_icon": "textures/paviui/safio/mobs/reptisaurio_guerrero",
+          "$toggle_group_forced_index": 8,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "31.33%",
+            208
+          ]
+        }
+      },
+      {
+        "mob_reptisaurio_arquero@dedsafio_bestiary.cell": {
+          "$mob_name": "Reptisaurio Arquero",
+          "$mob_icon": "textures/paviui/safio/mobs/reptisaurio_arquero",
+          "$toggle_group_forced_index": 9,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "44.66%",
+            208
+          ]
+        }
+      },
+      {
+        "mob_reptisaurio_lanza@dedsafio_bestiary.cell": {
+          "$mob_name": "Reptisaurio con Lanza",
+          "$mob_icon": "textures/paviui/safio/mobs/reptisaurio_lanza",
+          "$toggle_group_forced_index": 10,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "57.99%",
+            208
+          ]
+        }
+      },
+      {
+        "mob_creeper_de_pasto@dedsafio_bestiary.cell": {
+          "$mob_name": "Creeper de Pasto",
+          "$mob_icon": "textures/paviui/safio/mobs/creeper_de_pasto",
+          "$toggle_group_forced_index": 11,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "71.32%",
+            208
+          ]
+        }
+      },
+      {
+        "mob_narval@dedsafio_bestiary.cell": {
+          "$mob_name": "Narval",
+          "$mob_icon": "textures/paviui/safio/mobs/narval",
+          "$toggle_group_forced_index": 12,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "84.65%",
+            208
+          ]
+        }
+      },
+      {
+        "mob_dactylo_bebe@dedsafio_bestiary.cell": {
+          "$mob_name": "Dáctylo Bebé",
+          "$mob_icon": "textures/paviui/safio/mobs/dactylo_bebe",
+          "$toggle_group_forced_index": 13,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "18.00%",
+            286
+          ]
+        }
+      },
+      {
+        "mob_creeper_magma@dedsafio_bestiary.cell": {
+          "$mob_name": "Creeper de Magma",
+          "$mob_icon": "textures/paviui/safio/mobs/creeper_magma",
+          "$toggle_group_forced_index": 14,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "31.33%",
+            286
+          ]
+        }
+      },
+      {
+        "mob_reptisaurio_excavador@dedsafio_bestiary.cell": {
+          "$mob_name": "Reptisaurio Salvaje",
+          "$mob_icon": "textures/paviui/safio/mobs/reptisaurio_excavador",
+          "$toggle_group_forced_index": 15,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "44.66%",
+            286
+          ]
+        }
+      },
+      {
+        "mob_herobrine@dedsafio_bestiary.cell": {
+          "$mob_name": "Herobrine",
+          "$mob_icon": "textures/paviui/safio/mobs/herobrine",
+          "$toggle_group_forced_index": 16,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "57.99%",
+            286
+          ]
+        }
+      },
+      {
+        "mob_dromoraptor_azul@dedsafio_bestiary.cell": {
+          "$mob_name": "Dromoraptor Azul",
+          "$mob_icon": "textures/paviui/safio/mobs/dromoraptor_azul",
+          "$toggle_group_forced_index": 17,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "71.32%",
+            286
+          ]
+        }
+      },
+      {
+        "mob_creeper_pastel@dedsafio_bestiary.cell": {
+          "$mob_name": "Creeper Pastel",
+          "$mob_icon": "textures/paviui/safio/mobs/creeper_pastel",
+          "$toggle_group_forced_index": 18,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "84.65%",
+            286
+          ]
+        }
+      },
+      {
+        "mob_zarinosa@dedsafio_bestiary.cell": {
+          "$mob_name": "Zarinosa Espigüeya",
+          "$mob_icon": "textures/paviui/safio/mobs/zarinosa",
+          "$toggle_group_forced_index": 19,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "18.00%",
+            364
+          ]
+        }
+      },
+      {
+        "mob_molusco_rocoso@dedsafio_bestiary.cell": {
+          "$mob_name": "Molusco Rocoso",
+          "$mob_icon": "textures/paviui/safio/mobs/molusco_rocoso",
+          "$toggle_group_forced_index": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "31.33%",
+            364
+          ]
+        }
+      },
+      {
+        "mob_creeper_azalea@dedsafio_bestiary.cell": {
+          "$mob_name": "Creeper Raíz de Azalea",
+          "$mob_icon": "textures/paviui/safio/mobs/creeper_azalea",
+          "$toggle_group_forced_index": 21,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "44.66%",
+            364
+          ]
+        }
+      },
+      {
+        "mob_zombie_planta@dedsafio_bestiary.cell": {
+          "$mob_name": "Zombie Plata",
+          "$mob_icon": "textures/paviui/safio/mobs/zombie_planta",
+          "$toggle_group_forced_index": 22,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "57.99%",
+            364
+          ]
+        }
+      },
+      {
+        "mob_creeper_rojo@dedsafio_bestiary.cell": {
+          "$mob_name": "Creeper Rojo con Efectos Desconocidos",
+          "$mob_icon": "textures/paviui/safio/mobs/creeper_rojo",
+          "$toggle_group_forced_index": 23,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "71.32%",
+            364
+          ]
+        }
+      },
+      {
+        "mob_creeper_wither@dedsafio_bestiary.cell": {
+          "$mob_name": "Creeper de Rosa de Wither",
+          "$mob_icon": "textures/paviui/safio/mobs/creeper_wither",
+          "$toggle_group_forced_index": 24,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "84.65%",
+            364
+          ]
+        }
+      },
+      {
+        "mob_dactylo_adulto@dedsafio_bestiary.cell": {
+          "$mob_name": "Dáctylo Adulto",
+          "$mob_icon": "textures/paviui/safio/mobs/dactylo_adulto",
+          "$toggle_group_forced_index": 25,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "18.00%",
+            442
+          ]
+        }
+      },
+      {
+        "mob_creeper_fluido@dedsafio_bestiary.cell": {
+          "$mob_name": "Creeper de Fluído",
+          "$mob_icon": "textures/paviui/safio/mobs/creeper_fluido",
+          "$toggle_group_forced_index": 26,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "31.33%",
+            442
+          ]
+        }
+      },
+      {
+        "mob_nautilus_pequeno@dedsafio_bestiary.cell": {
+          "$mob_name": "Nautilus Óseo Pequeño",
+          "$mob_icon": "textures/paviui/safio/mobs/nautilus_pequeno",
+          "$toggle_group_forced_index": 27,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "44.66%",
+            442
+          ]
+        }
+      },
+      {
+        "mob_parasito@dedsafio_bestiary.cell": {
+          "$mob_name": "Parásito",
+          "$mob_icon": "textures/paviui/safio/mobs/parasito",
+          "$toggle_group_forced_index": 28,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "57.99%",
+            442
+          ]
+        }
+      },
+      {
+        "mob_garrapata@dedsafio_bestiary.cell": {
+          "$mob_name": "Garrapata Cerebral Pequeña",
+          "$mob_icon": "textures/paviui/safio/mobs/garrapata",
+          "$toggle_group_forced_index": 29,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "71.32%",
+            442
+          ]
+        }
+      },
+      {
+        "mob_gusano_carne@dedsafio_bestiary.cell": {
+          "$mob_name": "Gusano de Carne",
+          "$mob_icon": "textures/paviui/safio/mobs/gusano_carne",
+          "$toggle_group_forced_index": 30,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "84.65%",
+            442
+          ]
+        }
+      },
+      {
+        "mob_nautilus_grande@dedsafio_bestiary.cell": {
+          "$mob_name": "Nautilus Óseo Grande",
+          "$mob_icon": "textures/paviui/safio/mobs/nautilus_grande",
+          "$toggle_group_forced_index": 31,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "18.00%",
+            520
+          ]
+        }
+      },
+      {
+        "mob_flashbang@dedsafio_bestiary.cell": {
+          "$mob_name": "Flashbang",
+          "$mob_icon": "textures/paviui/safio/mobs/flashbang",
+          "$toggle_group_forced_index": 32,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "31.33%",
+            520
+          ]
+        }
+      },
+      {
+        "mob_cerebro_amarillo@dedsafio_bestiary.cell": {
+          "$mob_name": "Cerebro Amarillo",
+          "$mob_icon": "textures/paviui/safio/mobs/cerebro_amarillo",
+          "$toggle_group_forced_index": 33,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "44.66%",
+            520
+          ]
+        }
+      },
+      {
+        "mob_parasito_volador@dedsafio_bestiary.cell": {
+          "$mob_name": "Parásito Volador",
+          "$mob_icon": "textures/paviui/safio/mobs/parasito_volador",
+          "$toggle_group_forced_index": 34,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "57.99%",
+            520
+          ]
+        }
+      },
+      {
+        "mob_creeper_resorte@dedsafio_bestiary.cell": {
+          "$mob_name": "Creeper Resorte",
+          "$mob_icon": "textures/paviui/safio/mobs/creeper_resorte",
+          "$toggle_group_forced_index": 35,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "71.32%",
+            520
+          ]
+        }
+      },
+      {
+        "mob_kragtop@dedsafio_bestiary.cell": {
+          "$mob_name": "Kragtop",
+          "$mob_icon": "textures/paviui/safio/mobs/kragtop",
+          "$toggle_group_forced_index": 36,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "84.65%",
+            520
+          ]
+        }
+      },
+      {
+        "mob_cerebro_rojo@dedsafio_bestiary.cell": {
+          "$mob_name": "Cerebro Rojo",
+          "$mob_icon": "textures/paviui/safio/mobs/cerebro_rojo",
+          "$toggle_group_forced_index": 37,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "18.00%",
+            598
+          ]
+        }
+      },
+      {
+        "mob_medusa_cambiaformas@dedsafio_bestiary.cell": {
+          "$mob_name": "Médusa Ósea Cambiaformas",
+          "$mob_icon": "textures/paviui/safio/mobs/medusa_cambiaformas",
+          "$toggle_group_forced_index": 38,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "31.33%",
+            598
+          ]
+        }
+      },
+      {
+        "mob_reaper@dedsafio_bestiary.cell": {
+          "$mob_name": "Reaper Pequeño",
+          "$mob_icon": "textures/paviui/safio/mobs/reaper",
+          "$toggle_group_forced_index": 39,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "44.66%",
+            598
+          ]
+        }
+      },
+      {
+        "mob_fantasma_rojo@dedsafio_bestiary.cell": {
+          "$mob_name": "Fantasma Rojo",
+          "$mob_icon": "textures/paviui/safio/mobs/fantasma_rojo",
+          "$toggle_group_forced_index": 40,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "57.99%",
+            598
+          ]
+        }
+      },
+      {
+        "mob_fantasma_negro@dedsafio_bestiary.cell": {
+          "$mob_name": "Fantasma Negro",
+          "$mob_icon": "textures/paviui/safio/mobs/fantasma_negro",
+          "$toggle_group_forced_index": 41,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "71.32%",
+            598
+          ]
+        }
+      },
+      {
+        "mob_fantasma_amarillo@dedsafio_bestiary.cell": {
+          "$mob_name": "Fantasma Amarillo",
+          "$mob_icon": "textures/paviui/safio/mobs/fantasma_amarillo",
+          "$toggle_group_forced_index": 42,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "84.65%",
+            598
+          ]
+        }
+      },
+      {
+        "mob_vindicador_limbo@dedsafio_bestiary.cell": {
+          "$mob_name": "Vindicador",
+          "$mob_icon": "textures/paviui/safio/mobs/vindicador_limbo",
+          "$toggle_group_forced_index": 43,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "18.00%",
+            676
+          ]
+        }
+      },
+      {
+        "mob_fantasma_blanco@dedsafio_bestiary.cell": {
+          "$mob_name": "Fantasma Blanco",
+          "$mob_icon": "textures/paviui/safio/mobs/fantasma_blanco",
+          "$toggle_group_forced_index": 44,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "31.33%",
+            676
+          ]
+        }
+      },
+      {
+        "mob_creeper_visceral@dedsafio_bestiary.cell": {
+          "$mob_name": "Creeper Visceral",
+          "$mob_icon": "textures/paviui/safio/mobs/creeper_visceral",
+          "$toggle_group_forced_index": 45,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "44.66%",
+            676
+          ]
+        }
+      },
+      {
+        "mob_phantom_oscuro@dedsafio_bestiary.cell": {
+          "$mob_name": "Phantom Oscuro",
+          "$mob_icon": "textures/paviui/safio/mobs/phantom_oscuro",
+          "$toggle_group_forced_index": 46,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "57.99%",
+            676
+          ]
+        }
+      },
+      {
+        "mob_phantom_explosivo@dedsafio_bestiary.cell": {
+          "$mob_name": "Phantom Explosivo",
+          "$mob_icon": "textures/paviui/safio/mobs/phantom_explosivo",
+          "$toggle_group_forced_index": 47,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "71.32%",
+            676
+          ]
+        }
+      },
+      {
+        "mob_ojo_volador@dedsafio_bestiary.cell": {
+          "$mob_name": "Ojo Volador",
+          "$mob_icon": "textures/paviui/safio/mobs/ojo_volador",
+          "$toggle_group_forced_index": 48,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            "84.65%",
+            676
+          ]
+        }
+      }
+    ]
+  },
+  "description": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "controls": [
+      {
+        "title": {
+          "type": "label",
+          "text": "$mob_name",
+          "size": [
+            "100%",
+            28
+          ],
+          "font_scale_factor": 1.15,
+          "color": [
+            1,
+            0.9,
+            0.3
+          ],
+          "shadow": true,
+          "text_alignment": "center"
+        }
+      },
+      {
+        "day": {
+          "type": "label",
+          "text": "$mob_day",
+          "size": [
+            "100%",
+            16
+          ],
+          "font_scale_factor": 0.8,
+          "color": [
+            0.4,
+            0.9,
+            1
+          ],
+          "shadow": true,
+          "text_alignment": "center"
+        }
+      },
+      {
+        "portrait": {
+          "type": "image",
+          "texture": "$mob_icon",
+          "size": [
+            88,
+            88
+          ],
+          "keep_ratio": true
+        }
+      },
+      {
+        "gap": {
+          "type": "panel",
+          "size": [
+            0,
+            8
+          ]
+        }
+      },
+      {
+        "description": {
+          "type": "label",
+          "text": "$mob_description",
+          "size": [
+            "100%",
+            "default"
+          ],
+          "font_scale_factor": 0.85,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": true,
+          "text_alignment": "left"
+        }
+      },
+      {
+        "gap_bottom": {
+          "type": "panel",
+          "size": [
+            0,
+            14
+          ]
+        }
+      }
+    ]
+  },
+  "details": {
+    "type": "input_panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 500,
+    "consume_hover_events": true,
+    "visible": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "bestiary_close",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "backdrop": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "alpha": 0.9
+        }
+      },
+      {
+        "frame": {
+          "type": "image",
+          "texture": "textures/paviui/safio/pvsafio_bgmenu",
+          "size": [
+            "94%",
+            "94%"
+          ]
+        }
+      },
+      {
+        "bestiary_close@dedsafio_inventory.recipe_close_button": {
+          "$toggle_name": "dedsafio_mob_view",
+          "$toggle_group_forced_index": 0,
+          "size": [
+            30,
+            30
+          ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [
+            -25,
+            20
+          ]
+        }
+      },
+      {
+        "detail_bomba_warden@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_bomba_warden",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_bomba_warden",
+          "$scrolling_content": "dedsafio_bestiary.description_bomba_warden",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_pod_phora@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_pod_phora",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_pod_phora",
+          "$scrolling_content": "dedsafio_bestiary.description_pod_phora",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_skiff_phora@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_skiff_phora",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_skiff_phora",
+          "$scrolling_content": "dedsafio_bestiary.description_skiff_phora",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_creeper_nuclear@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_creeper_nuclear",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_creeper_nuclear",
+          "$scrolling_content": "dedsafio_bestiary.description_creeper_nuclear",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_reptisaurio_salvaje@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_reptisaurio_salvaje",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_reptisaurio_salvaje",
+          "$scrolling_content": "dedsafio_bestiary.description_reptisaurio_salvaje",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_plumosaurio@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_plumosaurio",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_plumosaurio",
+          "$scrolling_content": "dedsafio_bestiary.description_plumosaurio",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_dromoraptor_rojo@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_dromoraptor_rojo",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_dromoraptor_rojo",
+          "$scrolling_content": "dedsafio_bestiary.description_dromoraptor_rojo",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_reptisaurio_guerrero@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_reptisaurio_guerrero",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_reptisaurio_guerrero",
+          "$scrolling_content": "dedsafio_bestiary.description_reptisaurio_guerrero",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_reptisaurio_arquero@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_reptisaurio_arquero",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_reptisaurio_arquero",
+          "$scrolling_content": "dedsafio_bestiary.description_reptisaurio_arquero",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_reptisaurio_lanza@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_reptisaurio_lanza",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_reptisaurio_lanza",
+          "$scrolling_content": "dedsafio_bestiary.description_reptisaurio_lanza",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_creeper_de_pasto@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_creeper_de_pasto",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_creeper_de_pasto",
+          "$scrolling_content": "dedsafio_bestiary.description_creeper_de_pasto",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_narval@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_narval",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_narval",
+          "$scrolling_content": "dedsafio_bestiary.description_narval",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_dactylo_bebe@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_dactylo_bebe",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_dactylo_bebe",
+          "$scrolling_content": "dedsafio_bestiary.description_dactylo_bebe",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_creeper_magma@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_creeper_magma",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_creeper_magma",
+          "$scrolling_content": "dedsafio_bestiary.description_creeper_magma",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_reptisaurio_excavador@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_reptisaurio_excavador",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_reptisaurio_excavador",
+          "$scrolling_content": "dedsafio_bestiary.description_reptisaurio_excavador",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_herobrine@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_herobrine",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_herobrine",
+          "$scrolling_content": "dedsafio_bestiary.description_herobrine",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_dromoraptor_azul@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_dromoraptor_azul",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_dromoraptor_azul",
+          "$scrolling_content": "dedsafio_bestiary.description_dromoraptor_azul",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_creeper_pastel@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_creeper_pastel",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_creeper_pastel",
+          "$scrolling_content": "dedsafio_bestiary.description_creeper_pastel",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_zarinosa@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_zarinosa",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_zarinosa",
+          "$scrolling_content": "dedsafio_bestiary.description_zarinosa",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_molusco_rocoso@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_molusco_rocoso",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_molusco_rocoso",
+          "$scrolling_content": "dedsafio_bestiary.description_molusco_rocoso",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_creeper_azalea@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_creeper_azalea",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_creeper_azalea",
+          "$scrolling_content": "dedsafio_bestiary.description_creeper_azalea",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_zombie_planta@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_zombie_planta",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_zombie_planta",
+          "$scrolling_content": "dedsafio_bestiary.description_zombie_planta",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_creeper_rojo@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_creeper_rojo",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_creeper_rojo",
+          "$scrolling_content": "dedsafio_bestiary.description_creeper_rojo",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_creeper_wither@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_creeper_wither",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_creeper_wither",
+          "$scrolling_content": "dedsafio_bestiary.description_creeper_wither",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_dactylo_adulto@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_dactylo_adulto",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_dactylo_adulto",
+          "$scrolling_content": "dedsafio_bestiary.description_dactylo_adulto",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_creeper_fluido@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_creeper_fluido",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_creeper_fluido",
+          "$scrolling_content": "dedsafio_bestiary.description_creeper_fluido",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_nautilus_pequeno@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_nautilus_pequeno",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_nautilus_pequeno",
+          "$scrolling_content": "dedsafio_bestiary.description_nautilus_pequeno",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_parasito@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_parasito",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_parasito",
+          "$scrolling_content": "dedsafio_bestiary.description_parasito",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_garrapata@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_garrapata",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_garrapata",
+          "$scrolling_content": "dedsafio_bestiary.description_garrapata",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_gusano_carne@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_gusano_carne",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_gusano_carne",
+          "$scrolling_content": "dedsafio_bestiary.description_gusano_carne",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_nautilus_grande@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_nautilus_grande",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_nautilus_grande",
+          "$scrolling_content": "dedsafio_bestiary.description_nautilus_grande",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_flashbang@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_flashbang",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_flashbang",
+          "$scrolling_content": "dedsafio_bestiary.description_flashbang",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_cerebro_amarillo@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_cerebro_amarillo",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_cerebro_amarillo",
+          "$scrolling_content": "dedsafio_bestiary.description_cerebro_amarillo",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_parasito_volador@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_parasito_volador",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_parasito_volador",
+          "$scrolling_content": "dedsafio_bestiary.description_parasito_volador",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_creeper_resorte@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_creeper_resorte",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_creeper_resorte",
+          "$scrolling_content": "dedsafio_bestiary.description_creeper_resorte",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_kragtop@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_kragtop",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_kragtop",
+          "$scrolling_content": "dedsafio_bestiary.description_kragtop",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_cerebro_rojo@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_cerebro_rojo",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_cerebro_rojo",
+          "$scrolling_content": "dedsafio_bestiary.description_cerebro_rojo",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_medusa_cambiaformas@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_medusa_cambiaformas",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_medusa_cambiaformas",
+          "$scrolling_content": "dedsafio_bestiary.description_medusa_cambiaformas",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_reaper@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_reaper",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_reaper",
+          "$scrolling_content": "dedsafio_bestiary.description_reaper",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_fantasma_rojo@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_fantasma_rojo",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_fantasma_rojo",
+          "$scrolling_content": "dedsafio_bestiary.description_fantasma_rojo",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_fantasma_negro@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_fantasma_negro",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_fantasma_negro",
+          "$scrolling_content": "dedsafio_bestiary.description_fantasma_negro",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_fantasma_amarillo@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_fantasma_amarillo",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_fantasma_amarillo",
+          "$scrolling_content": "dedsafio_bestiary.description_fantasma_amarillo",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_vindicador_limbo@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_vindicador_limbo",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_vindicador_limbo",
+          "$scrolling_content": "dedsafio_bestiary.description_vindicador_limbo",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_fantasma_blanco@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_fantasma_blanco",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_fantasma_blanco",
+          "$scrolling_content": "dedsafio_bestiary.description_fantasma_blanco",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_creeper_visceral@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_creeper_visceral",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_creeper_visceral",
+          "$scrolling_content": "dedsafio_bestiary.description_creeper_visceral",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_phantom_oscuro@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_phantom_oscuro",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_phantom_oscuro",
+          "$scrolling_content": "dedsafio_bestiary.description_phantom_oscuro",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_phantom_explosivo@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_phantom_explosivo",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_phantom_explosivo",
+          "$scrolling_content": "dedsafio_bestiary.description_phantom_explosivo",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "detail_ojo_volador@common.scrolling_panel": {
+          "size": [
+            "78%",
+            "72%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            8
+          ],
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mob_ojo_volador",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$scroll_view_name": "dedsafio_mob_detail_ojo_volador",
+          "$scrolling_content": "dedsafio_bestiary.description_ojo_volador",
+          "$scrolling_content_anchor_from": "top_middle",
+          "$scrolling_content_anchor_to": "top_middle",
+          "$show_background": false,
+          "$scroll_box_visible": true,
+          "$scroll_box_visible_touch": true,
+          "$scroll_size": [
+            5,
+            "100%"
+          ],
+          "$scroll_size_touch": [
+            5,
+            "100%"
+          ],
+          "$scroll_view_port_size": [
+            "100% - 10px",
+            "100%"
+          ],
+          "$scroll_view_port_size_touch": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$view_port_size": [
+            "100%",
+            "100%"
+          ],
+          "$view_port_size_touch": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "description_bomba_warden@dedsafio_bestiary.description": {
+    "$mob_name": "Bombas Warden",
+    "$mob_day": "Día 1",
+    "$mob_icon": "textures/paviui/safio/mobs/bomba_warden",
+    "$mob_description": "Las Bombas Warden aparecen en DeepDark."
+  },
+  "description_pod_phora@dedsafio_bestiary.description": {
+    "$mob_name": "Pod Phora",
+    "$mob_day": "Día 1",
+    "$mob_icon": "textures/paviui/safio/mobs/pod_phora",
+    "$mob_description": "Nave que dispara Proyectiles Láser. Aparece en los Cubos Phora."
+  },
+  "description_skiff_phora@dedsafio_bestiary.description": {
+    "$mob_name": "Skiff Phora",
+    "$mob_day": "Día 1",
+    "$mob_icon": "textures/paviui/safio/mobs/skiff_phora",
+    "$mob_description": "Nave que ataca Cuerpo a Cuerpo. Aparece en los Cubos Phora."
+  },
+  "description_creeper_nuclear@dedsafio_bestiary.description": {
+    "$mob_name": "Creeper Nuclear",
+    "$mob_day": "Día 2",
+    "$mob_icon": "textures/paviui/safio/mobs/creeper_nuclear",
+    "$mob_description": "Provoca grandes explosiones. Aparece en la Nieve."
+  },
+  "description_reptisaurio_salvaje@dedsafio_bestiary.description": {
+    "$mob_name": "Reptisaurio Salvaje",
+    "$mob_day": "Día 2",
+    "$mob_icon": "textures/paviui/safio/mobs/reptisaurio_salvaje",
+    "$mob_description": "Ataca Cuerpo a Cuerpo. Aparece en las Cuevas del Centro de Quiu."
+  },
+  "description_plumosaurio@dedsafio_bestiary.description": {
+    "$mob_name": "Plumosaurio",
+    "$mob_day": "Día 2",
+    "$mob_icon": "textures/paviui/safio/mobs/plumosaurio",
+    "$mob_description": "Coloso pacífico, pero si lo golpeas te hará mucho daño."
+  },
+  "description_dromoraptor_rojo@dedsafio_bestiary.description": {
+    "$mob_name": "Dromoraptor Rojo",
+    "$mob_day": "Día 2",
+    "$mob_icon": "textures/paviui/safio/mobs/dromoraptor_rojo",
+    "$mob_description": "Depredador que posee una fuerza brutal. Se desplaza en manada."
+  },
+  "description_reptisaurio_guerrero@dedsafio_bestiary.description": {
+    "$mob_name": "Reptisaurio Guerrero",
+    "$mob_day": "Día 2",
+    "$mob_icon": "textures/paviui/safio/mobs/reptisaurio_guerrero",
+    "$mob_description": "Ataca Cuerpo a Cuerpo. Aparece en los Asentamientos Reptisaurios. Cuidado: Aplica Veneno Primitivo."
+  },
+  "description_reptisaurio_arquero@dedsafio_bestiary.description": {
+    "$mob_name": "Reptisaurio Arquero",
+    "$mob_day": "Día 2",
+    "$mob_icon": "textures/paviui/safio/mobs/reptisaurio_arquero",
+    "$mob_description": "Ataca con Arco y Flechas. Aparece en los Asentamientos Reptisaurios. Cuidado: Aplica Veneno Primitivo."
+  },
+  "description_reptisaurio_lanza@dedsafio_bestiary.description": {
+    "$mob_name": "Reptisaurio con Lanza",
+    "$mob_day": "Día 2",
+    "$mob_icon": "textures/paviui/safio/mobs/reptisaurio_lanza",
+    "$mob_description": "Ataca con Lanza. Aparece en los Asentamientos Reptisaurios. Cuidado: Aplica Veneno Primitivo."
+  },
+  "description_creeper_de_pasto@dedsafio_bestiary.description": {
+    "$mob_name": "Creeper de Pasto",
+    "$mob_day": "Día 3",
+    "$mob_icon": "textures/paviui/safio/mobs/creeper_de_pasto",
+    "$mob_description": "Pequeña variante de los Creepers que explota rápidamente y es muy veloz. Tiene probabilidad de salir cuando se rompen Bloques de Pasto, Pasto Corto, Pasto Alto, Arbustos, entre otras hierbas."
+  },
+  "description_narval@dedsafio_bestiary.description": {
+    "$mob_name": "Narval",
+    "$mob_day": "Día 3",
+    "$mob_icon": "textures/paviui/safio/mobs/narval",
+    "$mob_description": "Habita los acuíferos del Centro de Quiu. Si detecta intrusos embestirá a gran velocidad, con la probabilidad de empujarte y jugar contigo."
+  },
+  "description_dactylo_bebe@dedsafio_bestiary.description": {
+    "$mob_name": "Dáctylo Bebé",
+    "$mob_day": "Día 4",
+    "$mob_icon": "textures/paviui/safio/mobs/dactylo_bebe",
+    "$mob_description": "Criatura que surca los cielos del Centro de Quiu. Dispara proyectiles que taparán tu visión durante algunos segundos."
+  },
+  "description_creeper_magma@dedsafio_bestiary.description": {
+    "$mob_name": "Creeper de Magma",
+    "$mob_day": "Día 4",
+    "$mob_icon": "textures/paviui/safio/mobs/creeper_magma",
+    "$mob_description": "Al explotar, pone Lava en su posición."
+  },
+  "description_reptisaurio_excavador@dedsafio_bestiary.description": {
+    "$mob_name": "Reptisaurio Salvaje",
+    "$mob_day": "Día 4",
+    "$mob_icon": "textures/paviui/safio/mobs/reptisaurio_excavador",
+    "$mob_description": "Criatura pequeña que ataca directamente a quien se le acerque. Si te acercas demasiado, se entierra y te acecha hasta encontrarte, saliendo de nuevo para atacar."
+  },
+  "description_herobrine@dedsafio_bestiary.description": {
+    "$mob_name": "Herobrine",
+    "$mob_day": "Día 4",
+    "$mob_icon": "textures/paviui/safio/mobs/herobrine",
+    "$mob_description": "Herobrine fue añadido al servidor."
+  },
+  "description_dromoraptor_azul@dedsafio_bestiary.description": {
+    "$mob_name": "Dromoraptor Azul",
+    "$mob_day": "Día 4",
+    "$mob_icon": "textures/paviui/safio/mobs/dromoraptor_azul",
+    "$mob_description": "Se ha visto una nueva criatura en el Centro de Quiu: Dromoraptor Azul. Depredador extremadamente veloz que se desplaza en manada. Aparece en la Sabana del Centro de Quiu."
+  },
+  "description_creeper_pastel@dedsafio_bestiary.description": {
+    "$mob_name": "Creeper Pastel",
+    "$mob_day": "Día 5",
+    "$mob_icon": "textures/paviui/safio/mobs/creeper_pastel",
+    "$mob_description": "Al explotar mancha la pantalla con pastel por algunos segundos."
+  },
+  "description_zarinosa@dedsafio_bestiary.description": {
+    "$mob_name": "Zarinosa Espigüeya",
+    "$mob_day": "Día 5",
+    "$mob_icon": "textures/paviui/safio/mobs/zarinosa",
+    "$mob_description": "Criatura pequeña pero astuta que aparece en las Cuevas del Centro de Quiu. Se abalanza sobre tu cabeza y drena tu vida hasta matarte. Sólo puedes librarte con la ayuda de otra persona."
+  },
+  "description_molusco_rocoso@dedsafio_bestiary.description": {
+    "$mob_name": "Molusco Rocoso",
+    "$mob_day": "Día 6",
+    "$mob_icon": "textures/paviui/safio/mobs/molusco_rocoso",
+    "$mob_description": "Habita en la Guarida de Qumara. Con su cambio activo puede soltar fragmentos de netherita."
+  },
+  "description_creeper_azalea@dedsafio_bestiary.description": {
+    "$mob_name": "Creeper Raíz de Azalea",
+    "$mob_day": "Día 6",
+    "$mob_icon": "textures/paviui/safio/mobs/creeper_azalea",
+    "$mob_description": "Al explotar, te atrapará con sus raíces. Debes ser rápido para librarte de ellas."
+  },
+  "description_zombie_planta@dedsafio_bestiary.description": {
+    "$mob_name": "Zombie Plata",
+    "$mob_day": "Día 6",
+    "$mob_icon": "textures/paviui/safio/mobs/zombie_planta",
+    "$mob_description": "Zombie consumido por Qumara. Muy rápido y fuerte. Puede escalar paredes."
+  },
+  "description_creeper_rojo@dedsafio_bestiary.description": {
+    "$mob_name": "Creeper Rojo con Efectos Desconocidos",
+    "$mob_day": "Día 6",
+    "$mob_icon": "textures/paviui/safio/mobs/creeper_rojo",
+    "$mob_description": "Al explotar aplica un efecto desconocido."
+  },
+  "description_creeper_wither@dedsafio_bestiary.description": {
+    "$mob_name": "Creeper de Rosa de Wither",
+    "$mob_day": "Día 6",
+    "$mob_icon": "textures/paviui/safio/mobs/creeper_wither",
+    "$mob_description": "Al explotar aplica Wither. Aparece en el Nether."
+  },
+  "description_dactylo_adulto@dedsafio_bestiary.description": {
+    "$mob_name": "Dáctylo Adulto",
+    "$mob_day": "Día 6",
+    "$mob_icon": "textures/paviui/safio/mobs/dactylo_adulto",
+    "$mob_description": "La aparición de los Dáctylos Adulto forma parte de las pesadillas. Si tienes Insomnia de Nivel Alto se manifestarán en el cielo."
+  },
+  "description_creeper_fluido@dedsafio_bestiary.description": {
+    "$mob_name": "Creeper de Fluído",
+    "$mob_day": "Día 7",
+    "$mob_icon": "textures/paviui/safio/mobs/creeper_fluido",
+    "$mob_description": "Al explotar, introduce fluídos en tu computadora, provocando que tus componentes fallen y te desconecten de la realidad. Puede escalar."
+  },
+  "description_nautilus_pequeno@dedsafio_bestiary.description": {
+    "$mob_name": "Nautilus Óseo Pequeño",
+    "$mob_day": "Día 7",
+    "$mob_icon": "textures/paviui/safio/mobs/nautilus_pequeno",
+    "$mob_description": "Criatura voladora que atacará si te acercas. No puedes empujarla. Aplica Levitación. Son MUY peligrosos en grupo."
+  },
+  "description_parasito@dedsafio_bestiary.description": {
+    "$mob_name": "Parásito",
+    "$mob_day": "Día 7",
+    "$mob_icon": "textures/paviui/safio/mobs/parasito",
+    "$mob_description": "Criatura que habita en los Jugos Gástricos de Gleba. Ataca cuerpo a cuerpo sin pensarlo."
+  },
+  "description_garrapata@dedsafio_bestiary.description": {
+    "$mob_name": "Garrapata Cerebral Pequeña",
+    "$mob_day": "Día 7",
+    "$mob_icon": "textures/paviui/safio/mobs/garrapata",
+    "$mob_description": "Vaga por el planeta en busca de su próxima víctima. Ataca de inmediato si detecta una presencia desconocida. Puede escalar."
+  },
+  "description_gusano_carne@dedsafio_bestiary.description": {
+    "$mob_name": "Gusano de Carne",
+    "$mob_day": "Día 7",
+    "$mob_icon": "textures/paviui/safio/mobs/gusano_carne",
+    "$mob_description": "Criatura pequeña y lenta. Ataca directamente a quien se le acerque. Probabilidad de aparecer al romper los bloques de Grasa Líquida o Coagulada."
+  },
+  "description_nautilus_grande@dedsafio_bestiary.description": {
+    "$mob_name": "Nautilus Óseo Grande",
+    "$mob_day": "Día 7",
+    "$mob_icon": "textures/paviui/safio/mobs/nautilus_grande",
+    "$mob_description": "Criatura voladora de gran tamaño que atacará si te acercas. No puedes empujarla y aplica Levitación. Son MUY peligrosos en grupo."
+  },
+  "description_flashbang@dedsafio_bestiary.description": {
+    "$mob_name": "Flashbang",
+    "$mob_day": "Día 7",
+    "$mob_icon": "textures/paviui/safio/mobs/flashbang",
+    "$mob_description": "Corre velozmente hacia ti. Al explotar, cubre tu pantalla de blanco por algunos segundos. Sólo aparece de noche en el Overworld."
+  },
+  "description_cerebro_amarillo@dedsafio_bestiary.description": {
+    "$mob_name": "Cerebro Amarillo",
+    "$mob_day": "Día 7",
+    "$mob_icon": "textures/paviui/safio/mobs/cerebro_amarillo",
+    "$mob_description": "Se abalanza sobre tu cabeza, cegándote y drenando tu vida hasta matarte. Necesitas ayuda de otra persona para quitártelo."
+  },
+  "description_parasito_volador@dedsafio_bestiary.description": {
+    "$mob_name": "Parásito Volador",
+    "$mob_day": "Día 7",
+    "$mob_icon": "textures/paviui/safio/mobs/parasito_volador",
+    "$mob_description": "Habita dentro de las Verrugas Claras y Oscuras de Gleba. Al romperlas, saldrá y te atacará. Es muy veloz."
+  },
+  "description_creeper_resorte@dedsafio_bestiary.description": {
+    "$mob_name": "Creeper Resorte",
+    "$mob_day": "Día 8",
+    "$mob_icon": "textures/paviui/safio/mobs/creeper_resorte",
+    "$mob_description": "Al explotar, te lanzará hacia arriba hasta una gran altura. Aparecen de día en el Overworld."
+  },
+  "description_kragtop@dedsafio_bestiary.description": {
+    "$mob_name": "Kragtop",
+    "$mob_day": "Día 9",
+    "$mob_icon": "textures/paviui/safio/mobs/kragtop",
+    "$mob_description": "Criatura del Centro de Quiu. Con su cambio activo aumenta su daño y deja Manzanas de Ámbar al morir."
+  },
+  "description_cerebro_rojo@dedsafio_bestiary.description": {
+    "$mob_name": "Cerebro Rojo",
+    "$mob_day": "Día 9",
+    "$mob_icon": "textures/paviui/safio/mobs/cerebro_rojo",
+    "$mob_description": "Se abalanza sobre tu cabeza, cegándote y drenando tu vida hasta matarte. Necesitas ayuda de otra persona para quitártelo. IMPORTANTE: si estás bajo el control mental del cerebro, comenzarás a atacar a tus compañeros cercanos. Incluso podrías llegar a matarlos."
+  },
+  "description_medusa_cambiaformas@dedsafio_bestiary.description": {
+    "$mob_name": "Médusa Ósea Cambiaformas",
+    "$mob_day": "Día 9",
+    "$mob_icon": "textures/paviui/safio/mobs/medusa_cambiaformas",
+    "$mob_description": "Una criatura con capacidades únicas. Si golpea a un jugador, se convertirá en él y adoptará su inventario. Será EXTREMADAMENTE inteligente, contará con patrones de ataque y estrategias de pelea utilizando todos sus objetos y recursos."
+  },
+  "description_reaper@dedsafio_bestiary.description": {
+    "$mob_name": "Reaper Pequeño",
+    "$mob_day": "Día 9",
+    "$mob_icon": "textures/paviui/safio/mobs/reaper",
+    "$mob_description": "Al golpear a su objetivo con una Hoz, desterrará a su víctima directamente a un Laberinto en el Limbo del que deberás escapar cuanto antes y encontrar la salida."
+  },
+  "description_fantasma_rojo@dedsafio_bestiary.description": {
+    "$mob_name": "Fantasma Rojo",
+    "$mob_day": "Día 9",
+    "$mob_icon": "textures/paviui/safio/mobs/fantasma_rojo",
+    "$mob_description": "Entidad voladora del Limbo que ataca a gran velocidad."
+  },
+  "description_fantasma_negro@dedsafio_bestiary.description": {
+    "$mob_name": "Fantasma Negro",
+    "$mob_day": "Día 10",
+    "$mob_icon": "textures/paviui/safio/mobs/fantasma_negro",
+    "$mob_description": "Al golpearte te quitará un Corazón Permanente."
+  },
+  "description_fantasma_amarillo@dedsafio_bestiary.description": {
+    "$mob_name": "Fantasma Amarillo",
+    "$mob_day": "Día 10",
+    "$mob_icon": "textures/paviui/safio/mobs/fantasma_amarillo",
+    "$mob_description": "Si te golpea hará que popees un Tótem. Además, desaparece al pegarte, metiéndose dentro de tu cuerpo. Luego de unos segundos saldrá para atacar a un jugador cercano."
+  },
+  "description_vindicador_limbo@dedsafio_bestiary.description": {
+    "$mob_name": "Vindicador",
+    "$mob_day": "Día 10",
+    "$mob_icon": "textures/paviui/safio/mobs/vindicador_limbo",
+    "$mob_description": "Es capaz de deshabilitar el Escudo por algunos segundos al golpearte. Aparece en las Torres del Limbo. Al eliminarlo dropea Manzana de Oro."
+  },
+  "description_fantasma_blanco@dedsafio_bestiary.description": {
+    "$mob_name": "Fantasma Blanco",
+    "$mob_day": "Día 10",
+    "$mob_icon": "textures/paviui/safio/mobs/fantasma_blanco",
+    "$mob_description": "Golpea a gran velocidad y aplica Lentitud."
+  },
+  "description_creeper_visceral@dedsafio_bestiary.description": {
+    "$mob_name": "Creeper Visceral",
+    "$mob_day": "Día 10",
+    "$mob_icon": "textures/paviui/safio/mobs/creeper_visceral",
+    "$mob_description": "Invulnerable al daño convencional, sólo puedes eliminarlo utilizando un Altavoz."
+  },
+  "description_phantom_oscuro@dedsafio_bestiary.description": {
+    "$mob_name": "Phantom Oscuro",
+    "$mob_day": "Día 11",
+    "$mob_icon": "textures/paviui/safio/mobs/phantom_oscuro",
+    "$mob_description": "Al golpearte, hará que dropees un slot completo aleatorio de tu inventario. Aparece en las pesadillas si tienes Insomnia de Nivel Alto."
+  },
+  "description_phantom_explosivo@dedsafio_bestiary.description": {
+    "$mob_name": "Phantom Explosivo",
+    "$mob_day": "Día 11",
+    "$mob_icon": "textures/paviui/safio/mobs/phantom_explosivo",
+    "$mob_description": "Al golpearte dejará una TNT en tu posición. Aparece en las pesadillas si tienes Insomnia de Nivel Alto."
+  },
+  "description_ojo_volador@dedsafio_bestiary.description": {
+    "$mob_name": "Ojo Volador",
+    "$mob_day": "Día 12",
+    "$mob_icon": "textures/paviui/safio/mobs/ojo_volador",
+    "$mob_description": "Si te acercas demasiado te hará mucho daño. Es invulnerable y SÓLO recibirá daño si le apuntas con una Linterna. Aparece en TODO el Limbo, incluso en la Zona en la que antes no aparecían criaturas."
+  }
+}

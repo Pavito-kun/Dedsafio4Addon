@@ -1,0 +1,51 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "pavi:difficulty_pearl",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.2,
+        "height": 0.2
+      },
+      "minecraft:projectile": {
+        "power": 1.5,
+        "gravity": 0.03,
+        "on_hit": {
+          "impact_damage": {
+            "damage": 0,
+            "knockback": false
+          }
+        }
+      },
+      "minecraft:physics": {
+        "has_gravity": false
+      },
+      "minecraft:timer": {
+        "time": 15,
+        "looping": false,
+        "time_down_event": {
+          "event": "pavi:expire",
+          "target": "self"
+        }
+      }
+    },
+    "component_groups": {
+      "pavi:remove": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "events": {
+      "pavi:expire": {
+        "add": {
+          "component_groups": [
+            "pavi:remove"
+          ]
+        }
+      }
+    }
+  }
+}

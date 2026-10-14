@@ -1,0 +1,14 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:client_biome": {
+		"description": {
+			"identifier": "pavi:gleba"
+		},
+		"components": {
+			"minecraft:water_appearance": {
+				"surface_color": "#E85AA7",
+				"surface_opacity": 0.92
+			}
+		}
+	}
+}

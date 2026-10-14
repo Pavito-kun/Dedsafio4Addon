@@ -1,0 +1,503 @@
+// Shared specifications for the authored entity definitions and runtime spawn scheduler.
+export const MOBS = [
+  {
+    "key": "bomba_warden",
+    "shape": "bomb",
+    "tile": 0,
+    "hp": 24,
+    "damage": 5,
+    "speed": 0.3,
+    "habitat": "deepdark",
+    "blast": 4
+  },
+  {
+    "key": "pod_phora",
+    "shape": "ship",
+    "tile": 1,
+    "hp": 40,
+    "damage": 6,
+    "speed": 0.25,
+    "habitat": "phora",
+    "fly": true,
+    "ranged": "laser"
+  },
+  {
+    "key": "skiff_phora",
+    "shape": "ship",
+    "tile": 1,
+    "hp": 50,
+    "damage": 8,
+    "speed": 0.35,
+    "habitat": "phora",
+    "fly": true
+  },
+  {
+    "key": "creeper_nuclear",
+    "shape": "creeper",
+    "tile": 2,
+    "hp": 30,
+    "damage": 0,
+    "speed": 0.24,
+    "habitat": "snow",
+    "blast": 8
+  },
+  {
+    "key": "reptisaurio_salvaje",
+    "shape": "raptor",
+    "tile": 3,
+    "hp": 30,
+    "damage": 6,
+    "speed": 0.3,
+    "habitat": "quiu_cave"
+  },
+  {
+    "key": "plumosaurio",
+    "shape": "longneck",
+    "tile": 14,
+    "hp": 160,
+    "damage": 20,
+    "speed": 0.18,
+    "habitat": "quiu",
+    "passive": true,
+    "scale": 1.8
+  },
+  {
+    "key": "dromoraptor_rojo",
+    "shape": "raptor",
+    "tile": 4,
+    "hp": 45,
+    "damage": 12,
+    "speed": 0.36,
+    "habitat": "quiu",
+    "pack": 3
+  },
+  {
+    "key": "reptisaurio_guerrero",
+    "shape": "lizard",
+    "tile": 3,
+    "hp": 35,
+    "damage": 7,
+    "speed": 0.3,
+    "habitat": "settlement",
+    "effect": "primal"
+  },
+  {
+    "key": "reptisaurio_arquero",
+    "shape": "archer",
+    "tile": 3,
+    "hp": 28,
+    "damage": 4,
+    "speed": 0.28,
+    "habitat": "settlement",
+    "ranged": "arrow",
+    "effect": "primal"
+  },
+  {
+    "key": "reptisaurio_lanza",
+    "shape": "spear",
+    "tile": 3,
+    "hp": 35,
+    "damage": 8,
+    "speed": 0.3,
+    "habitat": "settlement",
+    "effect": "primal"
+  },
+  {
+    "key": "narval",
+    "shape": "narwhal",
+    "tile": 5,
+    "hp": 50,
+    "damage": 8,
+    "speed": 0.35,
+    "habitat": "quiu_water",
+    "swim": true,
+    "effect": "charge"
+  },
+  {
+    "key": "dactylo_bebe",
+    "shape": "winged",
+    "tile": 12,
+    "hp": 20,
+    "damage": 4,
+    "speed": 0.32,
+    "habitat": "quiu",
+    "fly": true,
+    "ranged": "ink",
+    "scale": 0.7
+  },
+  {
+    "key": "creeper_magma",
+    "shape": "creeper",
+    "tile": 4,
+    "hp": 25,
+    "damage": 0,
+    "speed": 0.25,
+    "habitat": "nether",
+    "blast": 3,
+    "effect": "lava"
+  },
+  {
+    "key": "reptisaurio_excavador",
+    "shape": "burrower",
+    "tile": 3,
+    "hp": 25,
+    "damage": 6,
+    "speed": 0.3,
+    "habitat": "quiu",
+    "burrow": true
+  },
+  {
+    "key": "dromoraptor_azul",
+    "shape": "raptor",
+    "tile": 5,
+    "hp": 35,
+    "damage": 8,
+    "speed": 0.52,
+    "habitat": "quiu_savanna",
+    "pack": 3
+  },
+  {
+    "key": "creeper_pastel",
+    "shape": "creeper",
+    "tile": 9,
+    "hp": 22,
+    "damage": 0,
+    "speed": 0.26,
+    "habitat": "overworld",
+    "blast": 2,
+    "effect": "cake"
+  },
+  {
+    "key": "zarinosa",
+    "shape": "tick",
+    "tile": 3,
+    "hp": 18,
+    "damage": 4,
+    "speed": 0.38,
+    "habitat": "quiu_cave",
+    "attach": true
+  },
+  {
+    "key": "creeper_azalea",
+    "shape": "creeper",
+    "tile": 10,
+    "hp": 28,
+    "damage": 0,
+    "speed": 0.3,
+    "habitat": "quiu",
+    "blast": 2,
+    "effect": "root"
+  },
+  {
+    "key": "zombie_planta",
+    "shape": "plant",
+    "tile": 10,
+    "hp": 40,
+    "damage": 10,
+    "speed": 0.4,
+    "habitat": "qumara",
+    "climb": true
+  },
+  {
+    "key": "creeper_rojo",
+    "shape": "creeper",
+    "tile": 15,
+    "hp": 25,
+    "damage": 0,
+    "speed": 0.28,
+    "habitat": "overworld",
+    "blast": 3,
+    "effect": "random"
+  },
+  {
+    "key": "creeper_wither",
+    "shape": "creeper",
+    "tile": 11,
+    "hp": 28,
+    "damage": 0,
+    "speed": 0.26,
+    "habitat": "nether",
+    "blast": 3,
+    "effect": "wither"
+  },
+  {
+    "key": "dactylo_adulto",
+    "shape": "winged",
+    "tile": 4,
+    "hp": 60,
+    "damage": 12,
+    "speed": 0.42,
+    "habitat": "nightmare",
+    "fly": true,
+    "scale": 1.5
+  },
+  {
+    "key": "creeper_fluido",
+    "shape": "creeper",
+    "tile": 12,
+    "hp": 28,
+    "damage": 0,
+    "speed": 0.32,
+    "habitat": "overworld",
+    "blast": 2,
+    "effect": "glitch",
+    "climb": true
+  },
+  {
+    "key": "nautilus_pequeno",
+    "shape": "nautilus",
+    "tile": 6,
+    "hp": 24,
+    "damage": 5,
+    "speed": 0.28,
+    "habitat": "gleba",
+    "fly": true,
+    "effect": "levitation",
+    "anchored": true,
+    "scale": 0.7
+  },
+  {
+    "key": "parasito",
+    "shape": "worm",
+    "tile": 8,
+    "hp": 16,
+    "damage": 4,
+    "speed": 0.35,
+    "habitat": "gleba_water",
+    "swim": true
+  },
+  {
+    "key": "garrapata",
+    "shape": "tick",
+    "tile": 7,
+    "hp": 20,
+    "damage": 5,
+    "speed": 0.36,
+    "habitat": "gleba",
+    "climb": true
+  },
+  {
+    "key": "gusano_carne",
+    "shape": "worm",
+    "tile": 8,
+    "hp": 10,
+    "damage": 3,
+    "speed": 0.12,
+    "habitat": "fat",
+    "scale": 0.6
+  },
+  {
+    "key": "nautilus_grande",
+    "shape": "nautilus",
+    "tile": 6,
+    "hp": 75,
+    "damage": 10,
+    "speed": 0.24,
+    "habitat": "gleba",
+    "fly": true,
+    "effect": "levitation",
+    "anchored": true,
+    "scale": 1.6
+  },
+  {
+    "key": "flashbang",
+    "shape": "thin",
+    "tile": 11,
+    "hp": 16,
+    "damage": 0,
+    "speed": 0.52,
+    "habitat": "night",
+    "blast": 0,
+    "effect": "flash",
+    "trigger": 3
+  },
+  {
+    "key": "cerebro_amarillo",
+    "shape": "brain",
+    "tile": 12,
+    "hp": 22,
+    "damage": 3,
+    "speed": 0.34,
+    "habitat": "gleba_cave",
+    "attach": true
+  },
+  {
+    "key": "parasito_volador",
+    "shape": "winged_worm",
+    "tile": 8,
+    "hp": 16,
+    "damage": 5,
+    "speed": 0.5,
+    "habitat": "warts",
+    "fly": true
+  },
+  {
+    "key": "creeper_resorte",
+    "shape": "spring",
+    "tile": 1,
+    "hp": 24,
+    "damage": 0,
+    "speed": 0.3,
+    "habitat": "day",
+    "blast": 0,
+    "effect": "launch",
+    "trigger": 3
+  },
+  {
+    "key": "cerebro_rojo",
+    "shape": "brain",
+    "tile": 15,
+    "hp": 32,
+    "damage": 4,
+    "speed": 0.38,
+    "habitat": "gleba",
+    "attach": true,
+    "mind": true
+  },
+  {
+    "key": "medusa_cambiaformas",
+    "shape": "jellyfish",
+    "tile": 7,
+    "hp": 60,
+    "damage": 7,
+    "speed": 0.32,
+    "habitat": "gleba",
+    "fly": true,
+    "shapeShift": true
+  },
+  {
+    "key": "reaper",
+    "shape": "reaper",
+    "tile": 11,
+    "hp": 45,
+    "damage": 7,
+    "speed": 0.32,
+    "habitat": "limbo_maze",
+    "effect": "banish"
+  },
+  {
+    "key": "fantasma_rojo",
+    "shape": "ghost",
+    "tile": 15,
+    "hp": 32,
+    "damage": 8,
+    "speed": 0.48,
+    "habitat": "limbo",
+    "fly": true
+  },
+  {
+    "key": "fantasma_negro",
+    "shape": "ghost",
+    "tile": 11,
+    "hp": 40,
+    "damage": 6,
+    "speed": 0.33,
+    "habitat": "limbo",
+    "fly": true,
+    "effect": "heart"
+  },
+  {
+    "key": "fantasma_amarillo",
+    "shape": "ghost",
+    "tile": 12,
+    "hp": 30,
+    "damage": 5,
+    "speed": 0.38,
+    "habitat": "limbo",
+    "fly": true,
+    "effect": "possess"
+  },
+  {
+    "key": "vindicador_limbo",
+    "shape": "vindicator",
+    "tile": 11,
+    "hp": 40,
+    "damage": 9,
+    "speed": 0.32,
+    "habitat": "limbo_towers",
+    "effect": "shield"
+  },
+  {
+    "key": "fantasma_blanco",
+    "shape": "ghost",
+    "tile": 13,
+    "hp": 28,
+    "damage": 5,
+    "speed": 0.5,
+    "habitat": "limbo",
+    "fly": true,
+    "effect": "slowness"
+  },
+  {
+    "key": "creeper_visceral",
+    "shape": "visceral",
+    "tile": 8,
+    "hp": 50,
+    "damage": 0,
+    "speed": 0.28,
+    "habitat": "gleba",
+    "blast": 4,
+    "immune": true
+  },
+  {
+    "key": "phantom_oscuro",
+    "shape": "winged",
+    "tile": 11,
+    "hp": 30,
+    "damage": 6,
+    "speed": 0.42,
+    "habitat": "nightmare",
+    "fly": true,
+    "effect": "drop"
+  },
+  {
+    "key": "phantom_explosivo",
+    "shape": "winged",
+    "tile": 15,
+    "hp": 25,
+    "damage": 6,
+    "speed": 0.42,
+    "habitat": "nightmare",
+    "fly": true,
+    "effect": "tnt"
+  },
+  {
+    "key": "ojo_volador",
+    "shape": "eye",
+    "tile": 7,
+    "hp": 45,
+    "damage": 18,
+    "speed": 0.35,
+    "habitat": "limbo",
+    "fly": true,
+    "immune": true
+  },
+  {
+    "key": "herobrine",
+    "shape": "human",
+    "tile": 3,
+    "hp": 80,
+    "damage": 12,
+    "speed": 0.38,
+    "habitat": "night"
+  },
+  {
+    "key": "molusco_rocoso",
+    "shape": "burrower",
+    "tile": 6,
+    "hp": 35,
+    "damage": 5,
+    "speed": 0.18,
+    "habitat": "qumara"
+  },
+  {
+    "key": "kragtop",
+    "shape": "quadruped",
+    "tile": 5,
+    "hp": 90,
+    "damage": 8,
+    "speed": 0.25,
+    "habitat": "quiu"
+  }
+];
+export const MOB_BY_ID = new Map(MOBS.map(m => ["pavi:" + m.key, m]));

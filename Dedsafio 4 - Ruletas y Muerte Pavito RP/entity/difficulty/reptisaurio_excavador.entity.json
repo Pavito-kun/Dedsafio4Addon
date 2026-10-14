@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "pavi:reptisaurio_excavador",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/difficulty/creatures_atlas"
+      },
+      "geometry": {
+        "default": "geometry.pavi.bomba_warden"
+      },
+      "animations": {
+        "move": "animation.pavi.difficulty.move",
+        "fly": "animation.pavi.difficulty.fly",
+        "burrow": "animation.pavi.difficulty.burrow"
+      },
+      "scripts": {
+        "animate": [
+          "move",
+          "burrow"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.pavi.difficulty"
+      ],
+      "spawn_egg": {
+        "base_color": "#382644",
+        "overlay_color": "#29dac8"
+      }
+    }
+  }
+}

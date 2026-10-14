@@ -1,0 +1,46 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Dedsafio 4 - Ruletas y Muerte Pavito",
+		"description": "Dedsafio 4 - Ruletas y Muerte Pavito Behavior Pack",
+		"uuid": "366f210d-5b73-6432-d1c8-eed1cb6afa27",
+		"version": [1, 0, 4],
+		"min_engine_version": [1, 20, 0]
+	},
+	"metadata": {
+		"authors": ["Pavito"],
+		"generated_with": {
+			"blockbench_item_wizard": ["1.2.4"],
+			"blockbench_entity_wizard": ["1.8.3"]
+		}
+	},
+	"modules": [
+		{
+			"description": "Behavior",
+			"version": [1, 0, 4],
+			"uuid": "e9e9afdb-fa71-367b-e9ee-1f4088a5fd49",
+			"type": "data"
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "1205541a-c8a2-440e-9a68-390628d079f4",
+			"entry": "scripts/main.js",
+			"version": [1, 0, 4]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "42a4c11f-fcd8-09d7-79c9-946f07ff4ef3",
+			"version": [1, 0, 4]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.11.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.3.0-beta"
+		}
+	]
+}

@@ -1,0 +1,267 @@
+{
+  "namespace": "pavi_difficulty",
+  "effect_in": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_in_time",
+    "from": 0,
+    "to": 1,
+    "next": "@pavi_difficulty.effect_hold"
+  },
+  "effect_hold": {
+    "anim_type": "wait",
+    "duration": "$title_stay_time",
+    "next": "@pavi_difficulty.effect_out"
+  },
+  "effect_out": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_out_time",
+    "from": 1,
+    "to": 0,
+    "destroy_at_end": "effect_overlay"
+  },
+  "effect_overlay": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 190,
+    "alpha": "@pavi_difficulty.effect_in",
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('%.8s' * #hud_title_text_string = 'pavi_fx:')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "cake": {
+          "type": "image",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "texture": "textures/difficulty/cake_overlay",
+          "alpha": 1,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#hud_title_text_string = 'pavi_fx:cake')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ink": {
+          "type": "image",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "texture": "textures/ui/Black",
+          "alpha": 0.86,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#hud_title_text_string = 'pavi_fx:ink')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "glitch": {
+          "type": "image",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "texture": "textures/difficulty/creatures_atlas",
+          "alpha": 0.65,
+          "color": [
+            0.6,
+            1,
+            0.7
+          ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#hud_title_text_string = 'pavi_fx:glitch')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "myopia": {
+          "type": "image",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "texture": "textures/ui/control_white",
+          "alpha": 0.2,
+          "color": [
+            0.4,
+            0.4,
+            0.4
+          ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#hud_title_text_string = 'pavi_fx:myopia')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "effect_factory": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "effect_overlay@pavi_difficulty.effect_overlay"
+      }
+    }
+  },
+  "yellow_in": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "from": [
+      "100%",
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "next": "@pavi_difficulty.yellow_hold"
+  },
+  "yellow_hold": {
+    "anim_type": "wait",
+    "duration": 12.8,
+    "next": "@pavi_difficulty.yellow_out"
+  },
+  "yellow_out": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": 0.6,
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      "-100%",
+      0
+    ],
+    "destroy_at_end": "yellow_notice"
+  },
+  "yellow_notice": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 200,
+    "offset": "@pavi_difficulty.yellow_in",
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hud_title_text_string = 'ps_ded_ruleta_amarillo')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "emblem": {
+          "type": "image",
+          "size": [
+            "42%y",
+            "42%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "keep_ratio": true,
+          "texture": "textures/difficulty/yellow_roulette"
+        }
+      },
+      {
+        "label": {
+          "type": "label",
+          "size": [
+            "80%",
+            "10%"
+          ],
+          "offset": [
+            0,
+            "28%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "text": "§e§lNUEVO MOB",
+          "text_alignment": "center",
+          "shadow": true,
+          "font_scale_factor": 1.6
+        }
+      }
+    ]
+  },
+  "yellow_factory": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "yellow_notice@pavi_difficulty.yellow_notice"
+      }
+    }
+  }
+}
